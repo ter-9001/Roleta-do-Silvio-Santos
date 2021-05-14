@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title= "Jogo da Roleta"
+    link( rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', 
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T", crossorigin="anonymous")
+  body
+   block content
+    .text-center
+      h1(style="margin:10px")="Jogo da Roleta"
+    .container-fluid
+      .row
+        .col-lg-4(style='width:100%;')
+          img(src= num1, style='width:100%;height:100%;')
+        .col-lg-4(style='width:100%;')
+          img(src= num2, style='width:100%;height:100%;')
+        .col-lg-4(style='width:100%;')
+          img(src= num3, style='width:100%;height:100%;') 
