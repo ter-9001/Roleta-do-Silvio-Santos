@@ -1,0 +1,12 @@
+body{
+    background: rgb(0, 0, 0);
+}
+
+#resultado{
+    
+    background-color: #ffff90;
+    color:darkred;
+    font-family: cursive;
+    font-size: x-large;
+    
+}
