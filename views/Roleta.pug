@@ -2,17 +2,40 @@ doctype html
 html
   head
     title= "Jogo da Roleta"
+    meta(charset='utf-8')
     link( rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', 
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T", crossorigin="anonymous")
+    link(rel='stylesheet', href='/stylesheets/style_own.css')
+    script(src="/javascripts/roletajs.js")
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')   
   body
    block content
-    .text-center
-      h1(style="margin:10px")="Jogo da Roleta"
-    .container-fluid
+    .text-center.margin.col
+      h1(style="margin:10px; margin-bottom: 20px")="Jogo da Roleta"
+    .container-fluid#main
       .row
         .col-lg-4(style='width:100%;')
-          img(src= num1, style='width:100%;height:100%;')
+          img(src= src1, style='width:100%;height:100%;')
         .col-lg-4(style='width:100%;')
-          img(src= num2, style='width:100%;height:100%;')
+          img(src= src2, style='width:100%;height:100%;')
         .col-lg-4(style='width:100%;')
-          img(src= num3, style='width:100%;height:100%;') 
+          img(src= src3, style='width:100%;height:100%;') 
+
+      .text-center.container.margin.col(style="margin:10px")
+        p(style="font-size: 20px")="Cicle no botão para jogar :)"
+        a(href="http://localhost:3000/roleta")
+          img.text-center.rounded-circle(src="./images/PowerButton.jpg", style="width:110px; height: 100%")
+
+      .row
+        .col-lg-4(style='width:100%;')
+          
+        .text-center.margin.col-lg-4#resultado(style="margin:10px;")
+            p=resultado            
+
+      .container.text-center
+        .row
+         .col-lg-4(style='width:100%;')
+           audio#audio(autoplay='')
+             source(src="piao.mp3", type='audio/mpeg')
+         .col-lg-4(style='width:100%;')
+           .btn.btn-danger#pausaraudio(style="height: 50px; width: 100px", volume='0')="Pausar a música"   
